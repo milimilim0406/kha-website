@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>게이트 현황 - 대한민국 헌터 협회</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- 헤더 (동일) -->
+    <header>
+        <div class="container header-content">
+            <a href="index.html" class="logo">
+                <img src="logo.png" alt="대한민국 헌터 협회" style="height: 50px; width: auto;" onerror="this.src='https://via.placeholder.com/50x50/1b499c/ffffff?text=KHA'">
+                <div class="logo-text">
+                    <h1>대한민국 헌터 협회</h1>
+                    <span>Korea Hunter Association</span>
+                </div>
+            </a>
+        </div>
+        <nav class="gnb">
+            <div class="container">
+                <ul>
+                    <li><a href="board_view.html">정보공개</a></li>
+                    <li><a href="#">민원신청</a></li>
+                    <li><a href="https://arca.live/b/characterai/154237746" target="_blank">헌터지원</a></li>
+                    <li><a href="gate_status.html">게이트/던전</a></li>
+                    <li><a href="#">협회소개</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container sub-content">
+        <h2 class="page-title">실시간 게이트 발생 현황</h2>
+        
+        <div class="search-filter">
+            <select>
+                <option>전체 지역</option>
+                <option>서울 특별지구</option>
+                <option>부산 방어선</option>
+                <option>DMZ 접경지역</option>
+            </select>
+            <select>
+                <option>전체 등급</option>
+                <option>S등급 (재난)</option>
+                <option>A등급</option>
+                <option>B등급</option>
+            </select>
+            <button class="btn-search">조회</button>
+        </div>
+
+        <table class="list-table">
+            <thead>
+                <tr>
+                    <th>관리번호</th>
+                    <th>지역</th>
+                    <th>등급</th>
+                    <th>상태</th>
+                    <th>담당 길드/부대</th>
+                    <th>발생시각</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="row-red">
+                    <td>RE-2026-0041</td>
+                    <td>평양 (북부)</td>
+                    <td><span class="rank s">측정불가</span></td>
+                    <td><span class="status danger">접근금지</span></td>
+                    <td>-</td>
+                    <td>실시간</td>
+                </tr>
+                <tr>
+                    <td>KR-2026-1023</td>
+                    <td>서울 강남구</td>
+                    <td><span class="rank a">A</span></td>
+                    <td><span class="status ing">토벌 중</span></td>
+                    <td>적호(Red Tiger)</td>
+                    <td>09:15:00</td>
+                </tr>
+                <tr>
+                    <td>KR-2026-1021</td>
+                    <td>부산 해운대</td>
+                    <td><span class="rank b">B</span></td>
+                    <td><span class="status ing">진입 대기</span></td>
+                    <td>은랑(Eunrang)</td>
+                    <td>08:42:11</td>
+                </tr>
+                <tr>
+                    <td>KR-2026-1019</td>
+                    <td>인천 부평</td>
+                    <td><span class="rank c">C</span></td>
+                    <td><span class="status done">파괴 완료</span></td>
+                    <td>백련(Baekryeon)</td>
+                    <td>06:30:22</td>
+                </tr>
+                <tr>
+                    <td>KR-2026-1015</td>
+                    <td>경기 수원</td>
+                    <td><span class="rank e">E</span></td>
+                    <td><span class="status done">파괴 완료</span></td>
+                    <td>스톤 스퀘어</td>
+                    <td>05:10:05</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <div class="pagination">
+            <a href="#" class="active">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">4</a>
+            <a href="#">5</a>
+        </div>
+    </div>
+</body>
+</html>

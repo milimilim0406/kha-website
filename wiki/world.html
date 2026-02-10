@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>KHA 세계관 설정</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="wiki-body">
+
+    <header class="wiki-header">
+        <div class="container">
+            <a href="index.html" class="back-link"><i class="fa-solid fa-arrow-left"></i> 대시보드로</a>
+            <h1>세계관 설정 <span class="badge">Classified Lv.2</span></h1>
+        </div>
+    </header>
+
+    <div class="container wiki-container">
+        <!-- 사이드바 (동일) -->
+        <aside class="wiki-sidebar">
+            <nav class="wiki-nav">
+                <ul>
+                    <li><a href="index.html"><i class="fa-solid fa-house"></i> 대시보드</a></li>
+                    <li><a href="guide.html"><i class="fa-solid fa-book"></i> 헌터 가이드</a></li>
+                    <li class="active"><a href="world.html"><i class="fa-solid fa-globe"></i> 세계관/설정</a></li>
+                    <li><a href="factions.html"><i class="fa-solid fa-building-shield"></i> 세력/길드</a></li>
+                    <li><a href="char.html"><i class="fa-solid fa-users"></i> 인물 도감</a></li>
+                    <li><a href="items.html"><i class="fa-solid fa-gem"></i> 아이템/경제</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- 메인 콘텐츠 -->
+        <main class="wiki-content">
+            <h2 class="page-title"><i class="fa-solid fa-dungeon"></i> 게이트 & 던전</h2>
+
+            <div class="accordion-box">
+                <!-- 1. 게이트 -->
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <span>게이트 (Gate)의 정의와 종류</span>
+                        <i class="fa-solid fa-chevron-down icon"></i>
+                    </button>
+                    <div class="accordion-body">
+                        <p><strong>정의:</strong> 지구와 적대적인 차원(던전)을 연결하는 불안정한 균열.</p>
+                        <ul>
+                            <li><strong>일반 게이트:</strong> 양방향 통행 가능 (지구 ↔ 던전).</li>
+                            <li><strong>레드 게이트 (Red Gate):</strong> <span class="text-danger">진입 시 입구가 소멸됨.</span> 보스 처치
+                                전까지 탈출 불가능한 위험 구역.</li>
+                            <li><strong>게이트 브레이크:</strong> 방치된 게이트에서 몬스터가 쏟아져 나오는 재해 현상.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 2. 헌터 시스템 -->
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <span>헌터 시스템 (Awakened)</span>
+                        <i class="fa-solid fa-chevron-down icon"></i>
+                    </button>
+                    <!-- world.html의 [헌터 시스템] 아코디언 내부 수정 -->
+
+                    <div class="accordion-body">
+                        <h4>📜 헌터의 기원과 인류 구원</h4>
+                        <p>과거 게이트 발생 초기, 인류는 멸망 직전까지 몰렸습니다. 현대 화기는 게이트 내부에서 <strong>'새총 수준'</strong>으로 위력이 급감하며, 전자기기 또한
+                            먹통이 되어 몬스터 대처가 불가능했습니다.</p>
+                        <p>그러나 각성자(헌터)들은 이 법칙을 무시하고 몬스터를 효과적으로 제압할 수 있었으며, 유일하게 게이트 내부 진입 및 브레이크 저지가 가능했습니다. 이들의 등장으로
+                            인류는 멸망을 피할 수 있었습니다.</p>
+
+                        <h4 style="margin-top:20px;">📊 헌터 인구 통계</h4>
+                        <ul>
+                            <li><strong>전체 인구 대비 비율:</strong> 약 30% ~ 40% (변동 폭 큼)</li>
+                            <li><strong>변동 원인:</strong> 헌터 직군이 <strong>'사망률 1위'</strong> 직업이기 때문. 신규 유입만큼이나 사망/은퇴 비율이
+                                압도적으로 높음.</li>
+                        </ul>
+
+                        <h4 style="margin-top:20px;">🔫 현대 무기와의 관계</h4>
+                        <ul>
+                            <li><strong>게이트 내부:</strong> 화기 사용 불가 (위력 급감). 헌터의 능력 및 냉병기 필수.</li>
+                            <li><strong>게이트 외부 (브레이크):</strong> 화기 사용 가능. 군대 동원되기도 함.</li>
+                            <li><strong>한계:</strong> 탄약 소모 대비 효율(가성비)이 극도로 낮고, 고위 몬스터에게는 피해를 주기 어려워 결국 헌터가 해결해야 함.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 3. 스킬 -->
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <span>스킬과 직업 (Skill & Class)</span>
+                        <i class="fa-solid fa-chevron-down icon"></i>
+                    </button>
+                    <div class="accordion-body">
+                        <p><strong>스킬 등급:</strong> 노말 < 레어 < 유니크 < (레전더리?)</p>
+                                <ul>
+                                    <li><strong>액티브:</strong> 마나/스태미나 소모. 능동적 발동.</li>
+                                    <li><strong>패시브:</strong> 상시 적용. 소모값 없음.</li>
+                                    <li><strong>히든 클래스:</strong> 특정 조건을 만족해야 얻는 희귀 직업. 성장 잠재력이 높음.</li>
+                                </ul>
+                    </div>
+                </div>
+
+                <!-- 4. 특이사항 -->
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <span>국가별 특이사항 (북한 등)</span>
+                        <i class="fa-solid fa-chevron-down icon"></i>
+                    </button>
+                    <div class="accordion-body">
+                        <p><strong>북한 (DPRK):</strong> 게이트 사태 초기에 국가 기능 상실.</p>
+                        <ul>
+                            <li>평양을 제외한 전 국토가 <strong>'마경(Monster Field)'</strong>화 됨.</li>
+                            <li>사실상 거대한 야생 던전 취급.</li>
+                            <li>남한과는 거대한 장벽(DMZ)으로 격리됨.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <h2 class="page-title" style="margin-top: 50px;">📍 주요 관리 구역</h2>
+
+            <div class="location-grid" style="display:grid; grid-template-columns: 1fr 1fr; gap:20px;">
+                <!-- 서울 -->
+                <div class="loc-card" style="border:1px solid #ddd; padding:15px; border-radius:8px; background:white;">
+                    <h4 style="color:#1b499c; margin-bottom:10px;"><i class="fa-solid fa-city"></i> 서울 특별 헌터 지구</h4>
+                    <p style="font-size:14px; color:#555;">
+                        대한민국 헌터 협회 본부 및 4대 길드 본사가 위치한 글로벌 헌터의 중심지.<br>
+                        각종 편의 시설, 헌터 전용 백화점, 알터 스토어 거래소가 밀집해 있다.
+                    </p>
+                </div>
+
+                <!-- 부산 -->
+                <div class="loc-card" style="border:1px solid #ddd; padding:15px; border-radius:8px; background:white;">
+                    <h4 style="color:#1b499c; margin-bottom:10px;"><i class="fa-solid fa-water"></i> 부산 해안 방어선</h4>
+                    <p style="font-size:14px; color:#555;">
+                        해양형 게이트 및 몬스터를 방어하는 최전선.<br>
+                        수중 전투에 특화된 헌터들이 주로 주둔한다.
+                    </p>
+                </div>
+
+                <!-- 제주 -->
+                <div class="loc-card" style="border:1px solid #ddd; padding:15px; border-radius:8px; background:white;">
+                    <h4 style="color:#1b499c; margin-bottom:10px;"><i class="fa-solid fa-island-tropical"></i> 제주 훈련장
+                    </h4>
+                    <p style="font-size:14px; color:#555;">
+                        통제된 게이트를 이용한 신규 헌터 실전 훈련소.<br>
+                        국가 헌터 사관학교가 위치해 있다.
+                    </p>
+                </div>
+
+                <!-- 북한 (위험) -->
+                <div class="loc-card"
+                    style="border:1px solid #d63031; background:#fff5f5; padding:15px; border-radius:8px;">
+                    <h4 style="color:#d63031; margin-bottom:10px;"><i class="fa-solid fa-skull-crossbones"></i> 북한 (구
+                        휴전선 이북)</h4>
+                    <p style="font-size:14px; color:#555;">
+                        <strong>[출입 금지]</strong> 게이트 사태 초기 국가 기능 상실.<br>
+                        평양 일부를 제외한 전 국토가 <strong>'마경(Monster Field)'</strong>화 됨.<br>
+                        협회의 허가 없는 월북은 즉시 사살 혹은 자격 박탈 대상.
+                    </p>
+                </div>
+            </div>
+            <!-- 기존 [주요 관리 구역] 섹션 아래에 추가 -->
+
+            <h2 class="page-title" style="margin-top: 60px;">🌐 주요 국가별 헌터 동향</h2>
+            <div class="nation-grid">
+
+                <!-- 미국 -->
+                <div class="nation-card usa">
+                    <div class="n-header">
+                        <span class="flag">🇺🇸</span>
+                        <h4>미국 (USA)</h4>
+                    </div>
+                    <div class="n-body">
+                        <p><strong>특징:</strong> 압도적인 물량과 거친 야생성. 총기 소지가 자유로운 만큼 헌터 범죄율도 높다.</p>
+                        <p><strong>핵심 지역:</strong> 네오 맨해튼 (동부), 러스트 벨트 (중부).</p>
+                        <p><strong>강점:</strong> 세계 최대 규모의 헌터 시장. 실전 경험이 풍부한 PvP 전문가 다수 보유.</p>
+                    </div>
+                </div>
+
+                <!-- 중국 -->
+                <div class="nation-card china">
+                    <div class="n-header">
+                        <span class="flag">🇨🇳</span>
+                        <h4>중국 (China)</h4>
+                    </div>
+                    <div class="n-body">
+                        <p><strong>특징:</strong> 국가 주도형 헌터 관리 (SGA). 헌터를 국가의 자산으로 취급하여 엄격히 통제함.</p>
+                        <p><strong>핵심 지역:</strong> 베이징 중앙 사령부, 상하이 게이트 경제 특구.</p>
+                        <p><strong>강점:</strong> 세계 최다 헌터 보유국. 집단 전술 및 물량 공세에 능함.</p>
+                    </div>
+                </div>
+
+                <!-- 일본 -->
+                <div class="nation-card japan">
+                    <div class="n-header">
+                        <span class="flag">🇯🇵</span>
+                        <h4>일본 (Japan)</h4>
+                    </div>
+                    <div class="n-body">
+                        <p><strong>특징:</strong> 탄탄한 중위권(B~A급) 헌터층. 한국과 유사한 대규모 투자 및 연구 인프라.</p>
+                        <p><strong>핵심 지역:</strong> 도쿄 통합 지구, 오사카 공업 단지.</p>
+                        <p><strong>강점:</strong> 안정적인 시스템과 높은 기술력. 마나 및 영적 능력(신사/음양사) 연구 발달.</p>
+                    </div>
+                </div>
+
+                <!-- 영국 -->
+                <div class="nation-card uk">
+                    <div class="n-header">
+                        <span class="flag">🇬🇧</span>
+                        <h4>영국 (UK)</h4>
+                    </div>
+                    <div class="n-body">
+                        <p><strong>특징:</strong> 게이트와 역사/신화의 연관성 연구(프로젝트 알비온)에 집중. 신중하고 보수적인 성향.</p>
+                        <p><strong>핵심 지역:</strong> 런던 화이트홀 지휘부, 포튼 다운 연구소.</p>
+                        <p><strong>강점:</strong> 해상 작전 및 테크노-아케인(기술 마법) 연구 선도.</p>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <!-- 아코디언 스크립트 -->
+    <script>
+        const accHeaders = document.querySelectorAll('.accordion-header');
+        accHeaders.forEach(header => {
+            header.addEventListener('click', () => {
+                const item = header.parentElement;
+                item.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+
+</html>

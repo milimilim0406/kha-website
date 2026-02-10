@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>KHA 인물 데이터베이스</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="wiki-body">
+
+    <header class="wiki-header">
+        <div class="container">
+            <a href="index.html" class="back-link"><i class="fa-solid fa-arrow-left"></i> 대시보드로</a>
+            <h1>인물 데이터베이스 <span class="badge">Personnel DB</span></h1>
+        </div>
+    </header>
+
+    <div class="container wiki-container">
+        <!-- 사이드바 (index.html과 동일) -->
+        <aside class="wiki-sidebar">
+            <nav class="wiki-nav">
+                <ul>
+                    <li><a href="index.html"><i class="fa-solid fa-house"></i> 대시보드</a></li>
+                    <li><a href="guide.html"><i class="fa-solid fa-book"></i> 헌터 가이드</a></li>
+                    <li><a href="world.html"><i class="fa-solid fa-globe"></i> 세계관/설정</a></li>
+                    <li><a href="factions.html"><i class="fa-solid fa-building-shield"></i> 세력/길드</a></li>
+                    <li class="active"><a href="char.html"><i class="fa-solid fa-users"></i> 인물 도감</a></li>
+                    <li><a href="items.html"><i class="fa-solid fa-gem"></i> 아이템/경제</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- 메인 콘텐츠 -->
+        <main class="wiki-content">
+            <!-- 필터 버튼 영역 -->
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">전체</button>
+                <button class="filter-btn" data-filter="hunter_association">협회</button>
+                <button class="filter-btn" data-filter="eunrang">은랑</button>
+                <button class="filter-btn" data-filter="baekryeon">백련</button>
+                <button class="filter-btn" data-filter="jeokho">적호</button>
+                <button class="filter-btn" data-filter="heuksa">흑사</button>
+                <!-- char.html의 필터 버튼 영역에 추가 -->
+                <button class="filter-btn" data-filter="freelancer">프리랜서/기타</button>
+                <button class="filter-btn" data-filter="villain" style="color:#d63031;">위험인물</button>
+            </div>
+
+            <!-- 캐릭터 카드 리스트 (JS로 채워짐) -->
+            <div id="char-grid" class="char-grid">
+                <!-- 여기에 카드가 생성됩니다 -->
+            </div>
+        </main>
+    </div>
+
+    <!-- 데이터 로드 및 스크립트 -->
+    <script src="data.js"></script>
+    <script>
+        // DOM 요소 가져오기
+        const charGrid = document.getElementById('char-grid');
+        const filterBtns = document.querySelectorAll('.filter-btn');
+
+        // 카드 생성 함수
+        function renderCharacters(filter = 'all') {
+            charGrid.innerHTML = ''; // 초기화
+
+            hunterDB.characters.forEach(char => {
+                // 필터링 로직
+                if (filter !== 'all' && char.group !== filter) return;
+
+                // 카드 HTML 생성
+                const card = document.createElement('div');
+                card.className = 'char-card';
+
+                // 랭크에 따른 색상 클래스 지정 (CSS에서 처리)
+                const rankClass = `rank-${char.rank.charAt(0)}`;
+
+                // 이미지 경로 설정 (없으면 기본 이미지)
+                const imgPath = char.image ? `images/chars/${char.image}` : 'https://via.placeholder.com/300x400?text=No+Image';
+
+                card.innerHTML = `
+                    <div class="char-img">
+                        <img src="${imgPath}" alt="${char.nameK}" onerror="this.src='https://via.placeholder.com/300x400?text=Image+Error'">
+                        <span class="char-rank ${rankClass}">${char.rank}</span>
+                    </div>
+                    <div class="char-info">
+                        <span class="char-group">${char.groupName}</span>
+                        <h3>${char.nameK} <small>${char.nameE}</small></h3>
+                        <p class="char-meta">${char.age}세 | ${char.role}</p>
+                        <p class="char-desc">${char.desc}</p>
+                    </div>
+                `;
+                charGrid.appendChild(card);
+            });
+        }
+
+        // 초기 로드
+        renderCharacters();
+
+        // 필터 버튼 클릭 이벤트
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // 버튼 스타일 활성화
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                // 필터 적용
+                renderCharacters(btn.dataset.filter);
+            });
+        });
+    </script>
+</body>
+
+</html>
